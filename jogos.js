@@ -2,6 +2,10 @@ const prompt = require("prompt-sync")();
 
 const jogos = [];
 
+const modelo = () => {
+    
+}
+
 const criar = () => {
   const nome = prompt(`Nome do jogo: `);
   const anoLancamento = prompt(`Ano de lançamento: `);
@@ -30,6 +34,7 @@ const criar = () => {
     console.log(`Jogo cadastrado com sucesso! `);
   } else {
     console.log(`Ops! Algo deu errado. :()`);
+    return false
   }
 };
 
@@ -48,5 +53,16 @@ const listar = () => {
         Sequência; ${jogo.sequencia}
         `);
     });
+    return true
   }
 };
+
+const atualizar = () => {
+    if(!listar()) {
+        return
+    }
+
+    const indice = prompt (`Qual indice deseja atualizar?`)
+}
+
+
